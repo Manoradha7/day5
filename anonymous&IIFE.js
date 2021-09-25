@@ -11,17 +11,20 @@ var odd = function (arr) {
 console.log(odd(a));
 
 
-b./* Convert all the strings to title caps in a string array */
+b./*Convert all the strings to title caps in a string array */
 
-let str = "Hello my name is mano.";
-(function (s){
-	let arr = s.split(" ");
-	let str = "";
-	for (let i in arr){
-		str += arr[i].charAt(0).toUpperCase() + arr[i].slice(1) + " ";
-	}
-	console.log(str.trim());
-})(str);
+let stringArray = ["hI", 'my', 'name', 'is', 'manop'];
+
+let resultStringArray = (function (stringArray) {
+
+    return (stringArray.map((item) => {
+
+        return item.toUpperCase()
+
+    }))
+})(stringArray);
+
+console.log("All upper case string in an array: " + resultStringArray)
 
 
 c./* Sum of all numbers in an array */
